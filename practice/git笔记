@@ -1,0 +1,82 @@
+##### 一、安装git
+
+1.安装git。
+
+一路点next，路径配置中有需要选择的地方都选择第一个选项。
+
+2.安装完成后，在开始菜单里找到“Git”->“Git Bash”，蹦出一个类似命令行窗口的东西，就说明Git安装成功！
+
+3.安装成功之后，（对于首次安装git的机器，一定要首先进行用户账户信息的配置：）在命令行中输入：
+
+`git config --global user.name "Your Name"**(LiHui)**`
+
+`git config --global user.email "email@example.com"**（821669288@qq.com）`**
+
+
+
+##### 二、本地SSH登录认证
+
+4.在本地生成密钥对，输入命令：
+
+`ssh-keygen -t rsa` 
+
+对于这条命令出来的结果连续敲3个回车，显示fingerprint生成好的提示，并给出一个RSA加密协议的方框图形。此时切换到.ssh目录下输入命令ls（或默认路径在C:\Users\Administrator\.ssh）,就可以看到私钥文件id_ras和公钥文件id_rsa.pub.
+
+
+
+如果出现：`'ssh-keygen' 不是内部或外部命令，也不是可运行的程序或批处理文件。`![image-20211112214020650](../../../../Typora/images/image-20211112214020650.png)
+
+
+
+则在安装git的目录下执行
+
+![image-20211112214132462](../../../../Typora/images/image-20211112214132462.png)
+
+
+
+##### 三、添加ssh认证至git
+
+使用公钥中的内容（有.pub后缀的那个文件）
+
+![image-20211112214324402](../../../../Typora/images/image-20211112214324402.png)
+
+![image-20211112214421414](../../../../Typora/images/image-20211112214421414.png)
+
+##### 四、将新项目拉到本地
+
+![image-20211112214813060](../../../../Typora/images/image-20211112214813060.png)
+
+在所需要存放项目的文件夹下方打开git窗口，输入git clone 仓库地址![image-20211112215001836](../../../../Typora/images/image-20211112215001836.png)
+
+
+
+##### 五、推送代码
+
+先add，再commit，再push
+
+![image-20211112215201467](../../../../Typora/images/image-20211112215201467.png)
+
+注意：
+
+1、git commit后面的-m 'xxx'指的是推送说明，不加也行，但是不加推送说明可能有问题
+
+2、git push中的main的问题见参考文章3
+
+
+
+参考：
+
+1、git上项目代码拉到本地方法
+
+https://blog.csdn.net/Steriles_/article/details/83022608
+
+2、git配置ssh秘钥
+
+https://www.cnblogs.com/yjlch1016/p/9692840.html
+
+3、Git 常见错误 之 error: src refspec xxx does not match any / error: failed to push some refs to 简单解决方法
+
+https://blog.csdn.net/u014361280/article/details/109703556
+
+4、[教你如何上传项目到GitHub](https://www.cnblogs.com/zouwangblog/p/11201561.html)
+
