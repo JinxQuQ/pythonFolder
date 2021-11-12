@@ -1,5 +1,5 @@
 class MyClass(object):
-    i = 123
+    i = 123456
 
     def __init__(self):
         self.i = 345
